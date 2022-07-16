@@ -3,21 +3,22 @@ public class CompoundInterest
 {
     public static void main()
     {
-        Scanner sc=new Scanner(System.in);
-        
+        Scanner p=new Scanner(System.in);
         System.out.println("Enter the principal amount: ");
-        double p=sc.nextDouble();
-        
-        System.out.println("Enter the rate of interest: ");
-        double r=sc.nextDouble();
-        
+        double a=p.nextDouble();
+        Scanner r=new Scanner(System.in);
+        System.out.println("Enter the rate percentage: ");
+        double b=r.nextDouble();
+        Scanner t=new Scanner(System.in);
         System.out.println("Enter the time period: ");
-        double t=sc.nextDouble();
+        double c=t.nextDouble();
+        double x=1+(b/100);
+        double y=Math.pow(x,c);
+        double m=(a*y)-a;
+        System.out.println("The compound interst is "+m);
         
-        double d=Math.pow(1+(r/100),t);
-        double amt=p*d;
-        double ci=amt-p;
-        System.out.println("The amount is "+amt+".");
-        System.out.println("The coumpound interest is "+ci+".");
+        
+        
+        
     }
 }
